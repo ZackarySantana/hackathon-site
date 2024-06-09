@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.focus-on-child-input:has(input:focus) {
+    outline: 1px solid #0498EC;
+}
+
+.dark .banner-left {
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0.3) 6px,
+        transparent 6px
+      ); 
+}
+
+.banner-left {
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.3) 6px,
+        transparent 6px
+      ); 
+}
+
+.fade-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.dark .shadow, .shadow-no-hover {
+    box-shadow: 0 4px 20px -4px #01121A;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.dark .shadow:hover {
+    box-shadow: 0 4px 20px -4px rgba(0,0,0,0.3);
+}
+
+.shadow, .shadow-no-hover {
+    box-shadow: 0 4px 10px -4px rgba(0,30,43,0.7);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.shadow:hover {
+    box-shadow: 0 4px 20px -4px rgba(0,30,43,0.8);
+}
+
+/* Fix body color for dark mode */
+body:has(.dark) {
+    background-color: #001E2B
+}
+
+summary {
+    position: relative;
+}
+
+.summary-marker {
+    position: absolute;
+    top: calc(50%);
+    right: 0;
+    transform: translateY(-50%);
+}
+
+details {
+    cursor: pointer;
+}
+
+details > summary > .summary-marker > svg {
+    transform: rotate(90deg);
+}
+
+details[open] > summary > .summary-marker > svg {
+    transform: rotate(0deg);
+}
+
+summary::-webkit-details-marker, summary::marker {
+    display:none;
+    content: "";
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/EuclidCircularA-Semibold-WebXL.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/EuclidCircularA-Semibold-WebXL.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 700;
+    font-style: italic;
+    src: url('/fonts/EuclidCircularA-SemiboldItalic-WebXL.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/EuclidCircularA-SemiboldItalic-WebXL.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/fonts/EuclidCircularA-Medium-WebXL.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/EuclidCircularA-Medium-WebXL.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 500;
+    font-style: italic;
+    src: url('/fonts/EuclidCircularA-MediumItalic-WebXL.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/EuclidCircularA-MediumItalic-WebXL.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/EuclidCircularA-Regular-WebXL.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/EuclidCircularA-Regular-WebXL.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/EuclidCircularA-RegularItalic-WebXL.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/EuclidCircularA-RegularItalic-WebXL.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'MongoDB Value Serif';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/MongoDBValueSerif-Regular.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/MongoDBValueSerif-Regular.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-weight: 700;
+    src: url('/fonts/SourceCodePro-Semibold.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/SourceCodePro-Semibold.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-weight: 700;
+    font-style: italic;
+    src: url('/fonts/SourceCodePro-SemiboldItalic.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/SourceCodePro-SemiboldItalic.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    src: url('/fonts/SourceCodePro-Regular.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/SourceCodePro-Regular.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/SourceCodePro-Italic.woff2?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff2'), url('/fonts/SourceCodePro-Italic.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff');
+}
+
+@font-face {
+    font-family: 'MMS Icons';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/MMSIcons-Regular.eot?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('embedded-opentype'), url('/fonts/MMSIcons-Regular.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff'), url('/fonts/MMSIcons-Regular.ttf?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('truetype');
+}
+
+@font-face {
+    font-family: 'MMS Org Icons';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/MMSOrgIcons-Regular.eot?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('embedded-opentype'), url('/fonts/MMSOrgIcons-Regular.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff'), url('/fonts/MMSOrgIcons-Regular.ttf?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('truetype');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: 'MMS Icons';
+        src: url('/fonts/MMSIcons-Regular.svg?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('svg');
+    }
+    @font-face {
+        font-family: 'MMS Org Icons';
+        src: url('/fonts/MMSOrgIcons-Regular.svg?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('svg');
+    }
+}
+
+@font-face {
+    font-family: 'MMS Illustrations';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/MMSIllustrations-Regular.eot?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('embedded-opentype'), url('/fonts/MMSIllustrations-Regular.woff?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('woff'), url('/fonts/MMSIllustrations-Regular.ttf?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('truetype');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: 'MMS Illustrations';
+        src: url('/fonts/MMSIllustrations-Regular.svg?_ds=223792ae5be9379bc0152f8cc9a7a5edcb802a74') format('svg');
+    }
+}
+
+
+* {
+    font-family: "Euclid Circular A", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

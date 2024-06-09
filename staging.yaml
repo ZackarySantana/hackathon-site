@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  hosts:
+    - website.skunkworks.staging.corp.mongodb.com
+arch: "arm64"
+mesh:
+  enabled: true
+services:
+  - name: http
+    ingress: true
+    port: 80
+    probes: false
+    protocol: TCP
+    targetPort: 8080
+    type: ClusterIP
